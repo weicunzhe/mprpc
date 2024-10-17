@@ -13,7 +13,7 @@ include_directories(${PROJECT_SOURCE_DIR}/example)
 # 设置库文件搜索路径
 link_directories(${PROJECT_SOURCE_DIR}/lib)
 
-add_subdirectory(src)
+#add_subdirectory(src)
 add_subdirectory(example)
 
 
