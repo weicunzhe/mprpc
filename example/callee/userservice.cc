@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include "user.pb.h"
+#include "mprpcapplication.h"
+#include "rpcprovider.h"
 
 /*
 UserService原来是一个本地服务，提供了两个进程内的本地方法Login和GetFriendLists
@@ -51,6 +53,8 @@ int main(int argc, char **argv)
     // 把UserService对象发布到rpc节点上
     RpcProvider provider;
     provider.NotifyService(new UserService());
+    
+
 
     // 启动一个rpc服务发布节点
     provider.Run();
