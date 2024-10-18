@@ -2,6 +2,9 @@
 cmake_minimum_required(VERSION 3.0...3.30)
 project(mprpc)
 
+# 生成Debug版本,可以进行gdb调试
+set(CMAKE_BUILD_TYPE "Debug")
+
 # 设置项目可执行文件输出路径
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 

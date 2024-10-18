@@ -2,6 +2,8 @@
 #include <iostream>
 #include <unistd.h>
 
+MprpcConfig MprpcApplication::m_config;
+
 void ShowArgsHelp()
 {
     std::cout << "format: command -i <configfile>" << std::endl;
@@ -25,11 +27,9 @@ void MprpcApplication::Init(int argc, char **argv)
             config_file = optarg;
             break;
         case '?':
-            std::cout << "invalid args!" << std::endl;
             ShowArgsHelp();
             exit(EXIT_FAILURE);
         case ':':
-            std::cout << "need <configfile>!" << std::endl;
             ShowArgsHelp();
             exit(EXIT_FAILURE);
         default:
@@ -38,7 +38,12 @@ void MprpcApplication::Init(int argc, char **argv)
     }
 
     // 开始加载配置文件 rpc_server_ip= rpc_server_port= zookeeper_ip= zookeeper_port=
-
+    m_config.LoadConfigFile(config_file.c_str());
+    
+    // std::cout << "rpcserverip:" << m_config.Load("rpcserverip") << '\n';
+    // std::cout << "rpcserverport:" << m_config.Load("rpcserverport") << '\n';
+    // std::cout << "zookeeperip:" << m_config.Load("zookeeperip") << '\n';
+    // std::cout << "zookeeperport:" << m_config.Load("zookeeperport") << std::endl;
 };
 MprpcApplication &MprpcApplication::GetInstatnce()
 {
