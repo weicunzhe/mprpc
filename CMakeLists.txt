@@ -1,3 +1,4 @@
+# 设置cmake的最低版本和项目名称
 cmake_minimum_required(VERSION 3.0...3.30)
 project(mprpc)
 
@@ -12,8 +13,10 @@ include_directories(${PROJECT_SOURCE_DIR}/src/include)
 include_directories(${PROJECT_SOURCE_DIR}/example)
 # 设置库文件搜索路径
 link_directories(${PROJECT_SOURCE_DIR}/lib)
-
+link_directories(/usr/local/lib)
+# src包含了mprpc框架所有的相关代码
 add_subdirectory(src)
+# example包含了mprpc框架使用的示例代码
 add_subdirectory(example)
 
 

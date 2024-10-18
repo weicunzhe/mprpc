@@ -7,11 +7,7 @@ class MprpcApplication
 
 public:
     static void Init(int argc, char **argv);
-    static MprpcApplication &GetInstatnce()
-    {
-        static MprpcApplication app;
-        return app;
-    }
+    static MprpcApplication &GetInstatnce();
 
 private:
     MprpcApplication(){};
