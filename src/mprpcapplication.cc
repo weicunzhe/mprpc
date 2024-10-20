@@ -39,14 +39,23 @@ void MprpcApplication::Init(int argc, char **argv)
 
     // 开始加载配置文件 rpc_server_ip= rpc_server_port= zookeeper_ip= zookeeper_port=
     m_config.LoadConfigFile(config_file.c_str());
-    
+
     // std::cout << "rpcserverip:" << m_config.Load("rpcserverip") << '\n';
     // std::cout << "rpcserverport:" << m_config.Load("rpcserverport") << '\n';
     // std::cout << "zookeeperip:" << m_config.Load("zookeeperip") << '\n';
     // std::cout << "zookeeperport:" << m_config.Load("zookeeperport") << std::endl;
+
+
+
+    
 };
 MprpcApplication &MprpcApplication::GetInstatnce()
 {
     static MprpcApplication app;
     return app;
+}
+
+MprpcConfig &MprpcApplication::GetConfig()
+{
+    return m_config;
 }
