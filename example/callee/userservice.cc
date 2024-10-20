@@ -4,6 +4,8 @@
 #include "mprpcapplication.h"
 #include "rpcprovider.h"
 #include "google/protobuf/compiler/importer.h"
+//callee 发布者
+
 
 /*
 UserService原来是一个本地服务，提供了两个进程内的本地方法Login和GetFriendLists

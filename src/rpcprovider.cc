@@ -116,10 +116,10 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     // 打印调试信息
     std::cout << "====================================" << '\n';
     std::cout << "header_size:" << header_size << '\n';
-    std::cout << "rpc_header_str:" << header_size << '\n';
-    std::cout << "service_name:" << header_size << '\n';
-    std::cout << "method_name:" << header_size << '\n';
-    std::cout << "args_size:" << header_size << '\n';
+    std::cout << "rpc_header_str:" << rpc_header_str << '\n';
+    std::cout << "service_name:" << service_name << '\n';
+    std::cout << "method_name:" << method_name << '\n';
+    std::cout << "args_size:" << args_size << '\n';
     std::cout << "====================================" << std::endl;
 
     // 获取service对象和method对象
