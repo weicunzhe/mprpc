@@ -57,6 +57,12 @@ extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
 class LoginResponse;
 struct LoginResponseDefaultTypeInternal;
 extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
+class RegisterRequest;
+struct RegisterRequestDefaultTypeInternal;
+extern RegisterRequestDefaultTypeInternal _RegisterRequest_default_instance_;
+class RegisterResponse;
+struct RegisterResponseDefaultTypeInternal;
+extern RegisterResponseDefaultTypeInternal _RegisterResponse_default_instance_;
 class ResultCode;
 struct ResultCodeDefaultTypeInternal;
 extern ResultCodeDefaultTypeInternal _ResultCode_default_instance_;
@@ -279,6 +285,230 @@ class ResultCode final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
+class RegisterRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:xiong.RegisterRequest) */ {
+ public:
+  inline RegisterRequest() : RegisterRequest(nullptr) {}
+  ~RegisterRequest() PROTOBUF_FINAL;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR RegisterRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline RegisterRequest(const RegisterRequest& from) : RegisterRequest(nullptr, from) {}
+  inline RegisterRequest(RegisterRequest&& from) noexcept
+      : RegisterRequest(nullptr, std::move(from)) {}
+  inline RegisterRequest& operator=(const RegisterRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterRequest& operator=(RegisterRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RegisterRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RegisterRequest* internal_default_instance() {
+    return reinterpret_cast<const RegisterRequest*>(
+        &_RegisterRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 3;
+  friend void swap(RegisterRequest& a, RegisterRequest& b) { a.Swap(&b); }
+  inline void Swap(RegisterRequest* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RegisterRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RegisterRequest* New(::google::protobuf::Arena* arena = nullptr) const PROTOBUF_FINAL {
+    return ::google::protobuf::Message::DefaultConstruct<RegisterRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const RegisterRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const RegisterRequest& from) { RegisterRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(RegisterRequest* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "xiong.RegisterRequest"; }
+
+ protected:
+  explicit RegisterRequest(::google::protobuf::Arena* arena);
+  RegisterRequest(::google::protobuf::Arena* arena, const RegisterRequest& from);
+  RegisterRequest(::google::protobuf::Arena* arena, RegisterRequest&& from) noexcept
+      : RegisterRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static const ::google::protobuf::Message::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kNameFieldNumber = 2,
+    kPwdFieldNumber = 3,
+    kIdFieldNumber = 1,
+  };
+  // bytes name = 2;
+  void clear_name() ;
+  const std::string& name() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* value);
+
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(
+      const std::string& value);
+  std::string* _internal_mutable_name();
+
+  public:
+  // bytes pwd = 3;
+  void clear_pwd() ;
+  const std::string& pwd() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_pwd(Arg_&& arg, Args_... args);
+  std::string* mutable_pwd();
+  PROTOBUF_NODISCARD std::string* release_pwd();
+  void set_allocated_pwd(std::string* value);
+
+  private:
+  const std::string& _internal_pwd() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pwd(
+      const std::string& value);
+  std::string* _internal_mutable_pwd();
+
+  public:
+  // uint32 id = 1;
+  void clear_id() ;
+  ::uint32_t id() const;
+  void set_id(::uint32_t value);
+
+  private:
+  ::uint32_t _internal_id() const;
+  void _internal_set_id(::uint32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:xiong.RegisterRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_RegisterRequest_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const RegisterRequest& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr name_;
+    ::google::protobuf::internal::ArenaStringPtr pwd_;
+    ::uint32_t id_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_user_2eproto;
+};
+// -------------------------------------------------------------------
+
 class LoginRequest final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:xiong.LoginRequest) */ {
  public:
@@ -484,6 +714,212 @@ class LoginRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr name_;
     ::google::protobuf::internal::ArenaStringPtr pwd_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_user_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RegisterResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:xiong.RegisterResponse) */ {
+ public:
+  inline RegisterResponse() : RegisterResponse(nullptr) {}
+  ~RegisterResponse() PROTOBUF_FINAL;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR RegisterResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline RegisterResponse(const RegisterResponse& from) : RegisterResponse(nullptr, from) {}
+  inline RegisterResponse(RegisterResponse&& from) noexcept
+      : RegisterResponse(nullptr, std::move(from)) {}
+  inline RegisterResponse& operator=(const RegisterResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterResponse& operator=(RegisterResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RegisterResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RegisterResponse* internal_default_instance() {
+    return reinterpret_cast<const RegisterResponse*>(
+        &_RegisterResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(RegisterResponse& a, RegisterResponse& b) { a.Swap(&b); }
+  inline void Swap(RegisterResponse* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RegisterResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RegisterResponse* New(::google::protobuf::Arena* arena = nullptr) const PROTOBUF_FINAL {
+    return ::google::protobuf::Message::DefaultConstruct<RegisterResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const RegisterResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const RegisterResponse& from) { RegisterResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(RegisterResponse* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "xiong.RegisterResponse"; }
+
+ protected:
+  explicit RegisterResponse(::google::protobuf::Arena* arena);
+  RegisterResponse(::google::protobuf::Arena* arena, const RegisterResponse& from);
+  RegisterResponse(::google::protobuf::Arena* arena, RegisterResponse&& from) noexcept
+      : RegisterResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static const ::google::protobuf::Message::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kResultFieldNumber = 1,
+    kSucessFieldNumber = 2,
+  };
+  // .xiong.ResultCode result = 1;
+  bool has_result() const;
+  void clear_result() ;
+  const ::xiong::ResultCode& result() const;
+  PROTOBUF_NODISCARD ::xiong::ResultCode* release_result();
+  ::xiong::ResultCode* mutable_result();
+  void set_allocated_result(::xiong::ResultCode* value);
+  void unsafe_arena_set_allocated_result(::xiong::ResultCode* value);
+  ::xiong::ResultCode* unsafe_arena_release_result();
+
+  private:
+  const ::xiong::ResultCode& _internal_result() const;
+  ::xiong::ResultCode* _internal_mutable_result();
+
+  public:
+  // bool sucess = 2;
+  void clear_sucess() ;
+  bool sucess() const;
+  void set_sucess(bool value);
+
+  private:
+  bool _internal_sucess() const;
+  void _internal_set_sucess(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:xiong.RegisterResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      1, 2, 1,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_RegisterResponse_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const RegisterResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    ::xiong::ResultCode* result_;
+    bool sucess_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -719,6 +1155,10 @@ class UserServiceRpc : public ::google::protobuf::Service {
                         const ::xiong::LoginRequest* request,
                         ::xiong::LoginResponse* response,
                         ::google::protobuf::Closure* done);
+  virtual void Register(::google::protobuf::RpcController* controller,
+                        const ::xiong::RegisterRequest* request,
+                        ::xiong::RegisterResponse* response,
+                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
   const ::google::protobuf::ServiceDescriptor* GetDescriptor() override;
@@ -753,6 +1193,10 @@ class UserServiceRpc_Stub final : public UserServiceRpc {
   void Login(::google::protobuf::RpcController* controller,
                         const ::xiong::LoginRequest* request,
                         ::xiong::LoginResponse* response,
+                        ::google::protobuf::Closure* done) override;
+  void Register(::google::protobuf::RpcController* controller,
+                        const ::xiong::RegisterRequest* request,
+                        ::xiong::RegisterResponse* response,
                         ::google::protobuf::Closure* done) override;
 
  private:
@@ -1068,6 +1512,254 @@ inline bool LoginResponse::_internal_sucess() const {
   return _impl_.sucess_;
 }
 inline void LoginResponse::_internal_set_sucess(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.sucess_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// RegisterRequest
+
+// uint32 id = 1;
+inline void RegisterRequest::clear_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.id_ = 0u;
+}
+inline ::uint32_t RegisterRequest::id() const {
+  // @@protoc_insertion_point(field_get:xiong.RegisterRequest.id)
+  return _internal_id();
+}
+inline void RegisterRequest::set_id(::uint32_t value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:xiong.RegisterRequest.id)
+}
+inline ::uint32_t RegisterRequest::_internal_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.id_;
+}
+inline void RegisterRequest::_internal_set_id(::uint32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.id_ = value;
+}
+
+// bytes name = 2;
+inline void RegisterRequest::clear_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.ClearToEmpty();
+}
+inline const std::string& RegisterRequest::name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:xiong.RegisterRequest.name)
+  return _internal_name();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void RegisterRequest::set_name(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:xiong.RegisterRequest.name)
+}
+inline std::string* RegisterRequest::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:xiong.RegisterRequest.name)
+  return _s;
+}
+inline const std::string& RegisterRequest::_internal_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.name_.Get();
+}
+inline void RegisterRequest::_internal_set_name(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(value, GetArena());
+}
+inline std::string* RegisterRequest::_internal_mutable_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.name_.Mutable( GetArena());
+}
+inline std::string* RegisterRequest::release_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:xiong.RegisterRequest.name)
+  return _impl_.name_.Release();
+}
+inline void RegisterRequest::set_allocated_name(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.name_.IsDefault()) {
+          _impl_.name_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:xiong.RegisterRequest.name)
+}
+
+// bytes pwd = 3;
+inline void RegisterRequest::clear_pwd() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.pwd_.ClearToEmpty();
+}
+inline const std::string& RegisterRequest::pwd() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:xiong.RegisterRequest.pwd)
+  return _internal_pwd();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void RegisterRequest::set_pwd(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.pwd_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:xiong.RegisterRequest.pwd)
+}
+inline std::string* RegisterRequest::mutable_pwd() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_pwd();
+  // @@protoc_insertion_point(field_mutable:xiong.RegisterRequest.pwd)
+  return _s;
+}
+inline const std::string& RegisterRequest::_internal_pwd() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.pwd_.Get();
+}
+inline void RegisterRequest::_internal_set_pwd(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.pwd_.Set(value, GetArena());
+}
+inline std::string* RegisterRequest::_internal_mutable_pwd() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.pwd_.Mutable( GetArena());
+}
+inline std::string* RegisterRequest::release_pwd() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:xiong.RegisterRequest.pwd)
+  return _impl_.pwd_.Release();
+}
+inline void RegisterRequest::set_allocated_pwd(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.pwd_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.pwd_.IsDefault()) {
+          _impl_.pwd_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:xiong.RegisterRequest.pwd)
+}
+
+// -------------------------------------------------------------------
+
+// RegisterResponse
+
+// .xiong.ResultCode result = 1;
+inline bool RegisterResponse::has_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  return value;
+}
+inline void RegisterResponse::clear_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const ::xiong::ResultCode& RegisterResponse::_internal_result() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::xiong::ResultCode* p = _impl_.result_;
+  return p != nullptr ? *p : reinterpret_cast<const ::xiong::ResultCode&>(::xiong::_ResultCode_default_instance_);
+}
+inline const ::xiong::ResultCode& RegisterResponse::result() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:xiong.RegisterResponse.result)
+  return _internal_result();
+}
+inline void RegisterResponse::unsafe_arena_set_allocated_result(::xiong::ResultCode* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.result_);
+  }
+  _impl_.result_ = reinterpret_cast<::xiong::ResultCode*>(value);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:xiong.RegisterResponse.result)
+}
+inline ::xiong::ResultCode* RegisterResponse::release_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::xiong::ResultCode* released = _impl_.result_;
+  _impl_.result_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+  released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  if (GetArena() == nullptr) {
+    delete old;
+  }
+#else   // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArena() != nullptr) {
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return released;
+}
+inline ::xiong::ResultCode* RegisterResponse::unsafe_arena_release_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:xiong.RegisterResponse.result)
+
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::xiong::ResultCode* temp = _impl_.result_;
+  _impl_.result_ = nullptr;
+  return temp;
+}
+inline ::xiong::ResultCode* RegisterResponse::_internal_mutable_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.result_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::xiong::ResultCode>(GetArena());
+    _impl_.result_ = reinterpret_cast<::xiong::ResultCode*>(p);
+  }
+  return _impl_.result_;
+}
+inline ::xiong::ResultCode* RegisterResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  ::xiong::ResultCode* _msg = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:xiong.RegisterResponse.result)
+  return _msg;
+}
+inline void RegisterResponse::set_allocated_result(::xiong::ResultCode* value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete (_impl_.result_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = (value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+
+  _impl_.result_ = reinterpret_cast<::xiong::ResultCode*>(value);
+  // @@protoc_insertion_point(field_set_allocated:xiong.RegisterResponse.result)
+}
+
+// bool sucess = 2;
+inline void RegisterResponse::clear_sucess() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.sucess_ = false;
+}
+inline bool RegisterResponse::sucess() const {
+  // @@protoc_insertion_point(field_get:xiong.RegisterResponse.sucess)
+  return _internal_sucess();
+}
+inline void RegisterResponse::set_sucess(bool value) {
+  _internal_set_sucess(value);
+  // @@protoc_insertion_point(field_set:xiong.RegisterResponse.sucess)
+}
+inline bool RegisterResponse::_internal_sucess() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.sucess_;
+}
+inline void RegisterResponse::_internal_set_sucess(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.sucess_ = value;
 }

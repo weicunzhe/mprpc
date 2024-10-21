@@ -29,5 +29,22 @@ int main(int argc, char **argv)
         std::cout << "rpc login response error : " << response.result().errmsg() << std::endl;
     }
 
+    xiong::RegisterRequest register_request;
+    register_request.set_id(2000);
+    register_request.set_name("mprpc");
+    register_request.set_pwd("666666");
+    xiong::RegisterResponse register_response;
+
+    // 以同步的方式发起rpc调用请求,等待返回结果
+    stub.Register(nullptr, &register_request, &register_response, nullptr);
+    if (0 == response.result().errcode())
+    {
+        std::cout << "rpc register response success:" << response.sucess() << std::endl;
+    }
+    else
+    {
+        std::cout << "rpc register response error : " << response.result().errmsg() << std::endl;
+    }
+
     return 0;
 }
