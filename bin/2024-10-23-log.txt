@@ -1,0 +1,4 @@
+16:41:9 => first log message!16:41:9 => /home/xiong/mprpc/example/callee/friendservice.cc:main:4916:42:20 => first log message!
+16:42:20 => /home/xiong/mprpc/example/callee/friendservice.cc:main:49
+16:42:22 => first log message!
+16:42:22 => /home/xiong/mprpc/example/callee/friendservice.cc:main:49
