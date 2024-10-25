@@ -1,0 +1,22 @@
+# ninja log v5
+0	4	0	clean	a31eedcededa8236
+0	502	1729844460238710977	src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o	19a2b93ee42e0772
+1	653	1729844460386083852	src/CMakeFiles/mprpc.dir/logger.cc.o	9095145ec12ad3e4
+1	677	1729844460407137123	src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o	6271493fd5e28945
+0	2338	1729844462080871944	src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o	46cfec6c95196a52
+1	2361	1729844462101925213	src/CMakeFiles/mprpc.dir/zookeeperUtil.cc.o	1c361ecd005cf3fe
+2	2561	1729844462301931260	example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.o	59ffe30f212f236e
+1	2579	1729844462322984529	src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o	707c36de310a1a
+1	2580	1729844462322984529	src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o	3e37f28b070d0d98
+2	2722	1729844462459830772	example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o	bf7beb4cdb1be2e3
+2	2756	1729844462491410675	example/callee/CMakeFiles/provider.dir/__/friend.pb.cc.o	58cb6fa032231e31
+1	2952	1729844462691416722	src/CMakeFiles/mprpc.dir/rpcprovider.cc.o	213e21530f57261a
+2952	2993	1729844462733523258	../lib/libmprpc.a	5c71062096aeac4f
+1	3074	1729844462807209697	example/callee/CMakeFiles/provider.dir/friendservice.cc.o	bcc6416d6f57df16
+2993	3774	1729844463512494183	../bin/consumer	606735044276ebcc
+3074	3879	1729844463607233889	../bin/provider	ed8b699d2a4afaba
+1	1230	1729844510975267900	src/CMakeFiles/mprpc.dir/zookeeperUtil.cc.o	1c361ecd005cf3fe
+1	1690	1729844511436068631	src/CMakeFiles/mprpc.dir/rpcprovider.cc.o	213e21530f57261a
+1690	1729	1729844511477959606	../lib/libmprpc.a	5c71062096aeac4f
+1730	2466	1729844512211051679	../bin/consumer	606735044276ebcc
+1729	2559	1729844512305306375	../bin/provider	ed8b699d2a4afaba

@@ -1,0 +1,6 @@
+16:22:53 =>[info]service_name:FriendServiceRpc
+16:22:53 =>[info]method_name:GetFriendsList
+16:23:59 =>[info]service_name:FriendServiceRpc
+16:23:59 =>[info]method_name:GetFriendsList
+16:24:35 =>[info]service_name:FriendServiceRpc
+16:24:35 =>[info]method_name:GetFriendsList
