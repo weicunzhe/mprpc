@@ -18,6 +18,8 @@ void ZkClient::Start()
     std::string host = MprpcApplication::GetInstatnce().GetConfig().Load("zookeeperip");
     std::string port = MprpcApplication::GetInstatnce().GetConfig().Load("zookeeperport");
     std::string connstr = host + ":" + port;
+
+    
     
 };
 // 在zkserver上根据指定的path创建znode节点
